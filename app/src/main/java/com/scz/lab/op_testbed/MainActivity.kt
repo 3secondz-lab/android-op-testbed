@@ -1,4 +1,4 @@
-package com.example.op_testbed
+package com.scz.lab.op_testbed
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
