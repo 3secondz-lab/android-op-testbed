@@ -17,7 +17,7 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         externalNativeBuild {
             cmake {
-                arguments "-DANDROID_STL=c++_shared"
+                arguments "-DANDROID_STL=c++_shared", "-DOpenCV_DIR=" + opencvsdk + "/sdk/native"
                 cppFlags "-std=c++11 -fexceptions"
             }
         }
@@ -59,6 +59,8 @@ dependencies {
     implementation 'org.tensorflow:tensorflow-lite-gpu:2.2.0'
     implementation project(path: ':model')
     implementation project(path: ':onnxruntime-nnapi')
+    implementation project(path: ':cv-4.5.1')
+    implementation project(path: ':opencv')
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'

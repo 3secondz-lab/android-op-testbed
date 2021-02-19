@@ -3,6 +3,9 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="1.7">
       <module name="op-testbed.app" target="1.8" />
+      <module name="op-testbed.cv-4.5.1" target="1.8" />
+      <module name="op-testbed.opencv" target="1.8" />
+      <module name="op-testbed.opencv-4.5.1" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -2,3 +2,7 @@ include ':onnxruntime-nnapi'
 include ':model'
 include ':app'
 rootProject.name = "op-testbed"
+include ':cv-4.5.1'
+
+include ':opencv'
+project(':opencv').projectDir = new File(opencvsdk + '/sdk')
