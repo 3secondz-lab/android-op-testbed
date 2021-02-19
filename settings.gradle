@@ -1,6 +1,4 @@
-include ':onnxruntime-min-build-ext'
-include ':onnxruntime-min-build-extended'
-include ':onnxruntime-release'
+include ':onnxruntime-nnapi'
 include ':model'
 include ':app'
 rootProject.name = "op-testbed"

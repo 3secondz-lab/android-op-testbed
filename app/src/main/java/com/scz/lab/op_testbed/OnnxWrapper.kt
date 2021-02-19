@@ -44,7 +44,7 @@ class OnnxWrapper(context: Context) {
 //        val modelStream = context.assets.open("supercombo.onnx")
 //        val modelStream = context.assets.open("supercombo-old.onnx")
 //        val modelStream = context.assets.open("supercombo-keras.onnx")
-        val modelStream = context.assets.open("supercombo-opt-ext.ort")
+        val modelStream = context.assets.open("supercombo-nnapi.ort")
         val size = modelStream.available()
         val buffer = ByteArray(size)
         modelStream.read(buffer)
@@ -74,9 +74,9 @@ class OnnxWrapper(context: Context) {
 //        val image = OnnxTensor.createTensor(env, data, longArrayOf(1, 12, 128, 256), OnnxJavaType.FLOAT)
         val inputMap = HashMap<String, OnnxTensor>()
         inputMap.put("desire", tensorBuilder.buildTensor2())
-//        inputMap.put("traffic_convention", tensorBuilder.buildTensor1())
-        inputMap.put("vision_input_imgs", tensorBuilder.buildTensor4())
-        inputMap.put("rnn_state", tensorBuilder.buildTensor3())
+        inputMap.put("traffic_convention", tensorBuilder.buildTensor1())
+        inputMap.put("input_imgs", tensorBuilder.buildTensor4())
+        inputMap.put("initial_state", tensorBuilder.buildTensor3())
 
 
         while(true) {
