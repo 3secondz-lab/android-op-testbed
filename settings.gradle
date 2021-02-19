@@ -1,3 +1,5 @@
+include ':onnxruntime-min-build-ext'
+include ':onnxruntime-min-build-extended'
 include ':onnxruntime-release'
 include ':model'
 include ':app'

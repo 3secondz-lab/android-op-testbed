@@ -3,6 +3,7 @@ package com.scz.lab.op_testbed
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import java.nio.ByteBuffer
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -11,6 +12,11 @@ class MainActivity : AppCompatActivity() {
 
         // Example of a call to a native method
         findViewById<TextView>(R.id.sample_text).text = stringFromJNI()
+
+        val onnx = OnnxWrapper(this)
+
+        val data = ByteBuffer.allocateDirect(1 * 12 * 128 * 256)
+        onnx.inference(data)
     }
 
     /**
